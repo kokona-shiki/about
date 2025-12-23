@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Personal Page of Kokona</title>
+    <meta name="description" content="This is the homepage of Kokona_Shiki">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <link rel="preload" href="./css/style.css" as="style">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/cyberpunk-2077.css" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "s29yk5g68m");
+    </script>
+    </head>
+    <body>
+        <!--上边栏-->
+        <header style="background-color: black; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <!--上边栏文字部分-->
+            <ul style="font-size: 1.3rem; text-align: left;">
+                <a class="header_a" href="https://kokona.top" style="margin-left: 20px;" target="_blank" data-i18n="header.blog">Blog</a>
+                <a class="header_a" href="#" data-i18n="header.radio" onclick="openRadioPage()">What Is Amateur Radio</a>
+            </ul>
+            <!--语言切换-->
+            <ul style="font-size: 1rem; text-align: right; text-align: center;">
+                <button class="header_a01" onclick="setLanguage('zh')" data-lang-btn="zh">中文</button>
+                <span style="color: #f9f002; margin: 0 10px;">|</span>
+                <button class="header_a01" onclick="setLanguage('en')" data-lang-btn="en">English</button>
+            </ul>
+        </header>
+        <section class="cyberpunk">
+            <h1 data-i18n="about.title">About Me</h1>
+            <p class="cyberpunk" style="margin-top: 30px;" data-i18n="about.content">
+                Hi, I'm Cade <br/>I enjoy programming and <a href="#" onclick="openRadioPage()">amateur radio</a> in my spare time. My callsign is <a href="https://www.qrz.com/db/BG0FFH">BG0FFH</a>. <br/>Curious about new technologies, and always open to learning.
+            </p>
+        </section>
+        <section class="cyberpunk black">
+            <h1 data-i18n="radio.title">Amateur Radio</h1>
+            <h3 style="margin-top: 15px;" data-i18n="radio.about">About</h3>
+            <ol style="margin-top: 20px; margin-left: 25px;" data-i18n="radio.timeline">
+                <li>Obtained the callsign <a href="https://www.qrz.com/db/BG0FFH" target="_blank">BG0FFH</a> at the end of 2024.</li>
+                <li>In 2020, I came across a video showing BG4QL receiving SSTV signals from the ISS, which sparked my strong interest in amateur radio.</li>
+                <li>A friend gave me a Quansheng UV-K6, and I soon purchased a Yagi antenna to try receiving satellite signals.</li>
+                <li>At the end of 2024, I passed the amateur radio operator exam and received my license.</li>
+                <li>On January 9, 2025, I completed my first QSO via a local repeater with <a href="https://www.qrz.com/db/BG0EOQ" target="_blank">BG0EOQ</a>.</li>
+                <li>On January 27, 2025, I made my first satellite repeater QSO using the ISS repeater, contacting <a href="https://www.qrz.com/db/BG7QIW" target="_blank">BG7QIW</a>.</li>
+                <li>I experimented with digital modes using the Yaesu FT-70DR, but due to the limited number of local digital-mode operators, I haven't used it often.</li>
+                <li>After learning about MMDVM, I purchased a duplex hotspot and began practicing English QSOs in the TG91 worldwide talkgroup.</li>
+                <li>During a field activity, I met <a href="https://www.qrz.com/db/BG0EUQ" target="_blank">BG0EUQ</a> and began learning about shortwave communication.</li>
+                <li>I later acquired an ICOM IC-705 and a shortwave GP antenna to begin SWL on HF.</li>
+                <li>In my spare time, I explored various communication modes with <a href="https://www.qrz.com/db/BG0EUQ" target="_blank">BG0EUQ</a>, including D-STAR and RTTY.</li>
+                <li>On May 23, 2025, I successfully made my first contact via the RS-44 linear transponder satellite with <a href="https://www.qrz.com/db/BG0EUQ" target="_blank">BG0EUQ</a>.</li>
+                <li>In August 2025, I obtained my amateur radio Class B license and began to explore shortwave.</a>.</li>
+            </ol>
+            <h3 style="margin-top: 20px;" data-i18n="radio.equipment">My equipments</h3>
+            <h4 style="margin-left: 20px; margin-top: 10px;">ICOM IC-705</h4>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ic705.jpg">
+            </div>
+            <h4 style="margin-left: 20px; margin-top: 10px;">Quansheng UV-K6</h4>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/uvk6.png">
+            </div>
+            <h4 style="margin-left: 20px; margin-top: 10px;">Yaesu FT-70DR</h4>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ft70dr.jpg">
+            </div>
+            <h4 style="margin-left: 20px; margin-top: 10px;">MMDVM hotspot & CWO</h4>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/mmdvm_cwo.png">
+            </div>
+            <h2 data-i18n="radio.activities">Activities</h2>
+            <h2 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.contests">Contests</h2>
+            <h3 style="margin-left: 20px; margin-top: 10px;">CQWW</h3>
+            <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.myself">Myself</h4>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 25%; height: auto;" class="cyberpunk" src="./img/myself.jpg">
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_1.jpg">
+            </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_2.jpg">
+            </div>
+            <div style="display: flex; justify-content: center; ">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_3.jpg">
+            </div>
+            <h3 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.satellite">Satellite repeater</h3>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/705sat.jpg">
+            </div>
+            <h3 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.qo100">The first successful amateur radio test via the QO-100 satellite was achieved.</h3>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/qo100.jpg">
+            </div>
+            <h3 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.field">Field operation</h3>
+            <div style="display: flex; justify-content: center;">
+                <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation.png">
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation1.png">
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation2.png">
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation3.png">
+            </div>
+        </section>
+        <section>
+            <h4 style="text-align: center; margin-top: 20px;" data-i18n="quote.title">Everyday quote</h4>
+            <p class="cyberpunk" id="hitokoto" style="color: #000000; margin-top: 20px; text-align: center;">
+                <a id="hitokoto_text" data-i18n="quote.loading">:D Fetching...</a>
+            </p>
+        </section>
+
+        <!-- 业余无线电弹窗 -->
+        <div id="radioModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto;">
+            <div style="position: relative; max-width: 800px; margin: 20px auto; background: #000; padding: 20px; border: 2px solid #f9f002;">
+                <button onclick="closeRadioPage()" style="position: absolute; top: 10px; right: 10px; color: #f9f002; background: none; border: none; font-size: 24px; cursor: pointer;">×</button>
+                <div id="radioContent">
+                    <!-- 业余无线电内容将在这里加载 -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // 多语言内容
+            const translations = {
+                en: {
+                    "header.blog": "Blog",
+                    "header.radio": "What Is Amateur Radio",
+                    "about.title": "About Me",
+                    "about.content": "Hi, I'm Cade <br/>I enjoy programming and <a href='#' onclick='openRadioPage()'>amateur radio</a> in my spare time. My callsign is <a href='https://www.qrz.com/db/BG0FFH'>BG0FFH</a>. <br/>Curious about new technologies, and always open to learning.",
+                    "radio.title": "Amateur Radio",
+                    "radio.about": "About",
+                    "radio.equipment": "My equipments",
+                    "radio.activities": "Activities",
+                    "radio.contests": "Contests",
+                    "radio.myself": "Myself",
+                    "radio.satellite": "Satellite repeater",
+                    "radio.qo100": "The first successful amateur radio test via the QO-100 satellite was achieved.",
+                    "radio.field": "Field operation",
+                    "quote.title": "Everyday quote",
+                    "quote.loading": ":D Fetching...",
+                    "title": "Personal Page of Kokona"
+                },
+                zh: {
+                    "header.blog": "博客",
+                    "header.radio": "什么是业余无线电",
+                    "about.title": "关于我",
+                    "about.content": "你好，我是 凯德/Cade<br/>我喜欢编程和 <a href='#' onclick='openRadioPage()'>业余无线电</a>。我的呼号是 <a href='https://www.qrz.com/db/BG0FFH'>BG0FFH</a>。<br/>对新技术充满好奇，也乐于不断学习。",
+                    "radio.title": "业余无线电",
+                    "radio.about": "经历",
+                    "radio.equipment": "我的设备",
+                    "radio.activities": "活动记录",
+                    "radio.contests": "竞赛",
+                    "radio.myself": "本人",
+                    "radio.satellite": "卫星中继通联",
+                    "radio.qo100": "QO-100卫星首次测试成功",
+                    "radio.field": "野架活动",
+                    "quote.title": "每日一言",
+                    "quote.loading": ":D 搜寻中...",
+                    "title": "Kokona的个人页"
+                },
+                "radio.timeline": {
+                    "en": [
+                        "Obtained the callsign <a href='https://www.qrz.com/db/BG0FFH' target='_blank'>BG0FFH</a> at the end of 2024.",
+                        "In 2020, I came across a video showing BG4QL receiving SSTV signals from the ISS, which sparked my strong interest in amateur radio.",
+                        "A friend gave me a Quansheng UV-K6, and I soon purchased a Yagi antenna to try receiving satellite signals.",
+                        "At the end of 2024, I passed the amateur radio operator exam and received my license.",
+                        "On January 9, 2025, I completed my first QSO via a local repeater with <a href='https://www.qrz.com/db/BG0EOQ' target='_blank'>BG0EOQ</a>.",
+                        "On January 27, 2025, I made my first satellite repeater QSO using the ISS repeater, contacting <a href='https://www.qrz.com/db/BG7QIW' target='_blank'>BG7QIW</a>.",
+                        "I experimented with digital modes using the Yaesu FT-70DR, but due to the limited number of local digital-mode operators, I haven't used it often.",
+                        "After learning about MMDVM, I purchased a duplex hotspot and began practicing English QSOs in the TG91 worldwide talkgroup.",
+                        "During a field activity, I met <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a> and began learning about shortwave communication.",
+                        "I later acquired an ICOM IC-705 and a shortwave GP antenna to begin SWL on HF.",
+                        "In my spare time, I explored various communication modes with <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a>, including D-STAR and RTTY.",
+                        "On May 23, 2025, I successfully made my first contact via the RS-44 linear transponder satellite with <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a>.",
+                        "In August 2025, I obtained my amateur radio Class B license and began to explore shortwave."
+                    ],
+                    "zh": [
+                        "于2024年底取得呼号 <a href='https://www.qrz.com/db/BG0FFH' target='_blank'>BG0FFH</a>。",
+                        "2020年看到BG4QL接收来自国际空间站的SSTV视频，从而对业余无线电产生浓厚兴趣。",
+                        "朋友赠送了泉盛UV-K6，对卫星通信产生兴趣后购买八木天线尝试接收。",
+                        "2024年底通过业余无线电操作证考试并获得执照。",
+                        "2025年1月9日通过本地中继与 <a href='https://www.qrz.com/db/BG0EOQ' target='_blank'>BG0EOQ</a> 完成首次通联。",
+                        "2025年1月27日使用国际空间站中继与 <a href='https://www.qrz.com/db/BG7QIW' target='_blank'>BG7QIW</a> 完成首个卫星通联。",
+                        "使用 Yaesu FT-70DR 尝试数字模式，但由于本地数字用户较少，使用频率不高。",
+                        "得知 MMDVM 后购入双工热点，在 TG91 世界组练习英语通联。",
+                        "在一次野架活动中认识 <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a>，并开始了解短波通信。",
+                        "后续购入 ICOM IC-705 和短波GP天线，开始进行短波守听（SWL）。",
+                        "在业余时间与 <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a> 一起尝试多种通信方式，如 D-STAR 与 RTTY。",
+                        "2025年5月23日，首次通过 RS-44 卫星线性转发器与 <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a> 完成通联。",
+                        "在2025年8月份，我取得了业余无线电B类执照并且开始接触短波。"
+                    ]
+                }
+            };
+
+            let currentLang = localStorage.getItem('language') || 'en';
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('language', lang);
+                updateLanguage();
+                updateLanguageButtons();
+            }
+
+            function updateLanguage() {
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    const translation = translations[currentLang][key];
+                    if (translation) {
+                        element.innerHTML = translation;
+                    }
+                });
+
+                // 更新标题
+                document.title = translations[currentLang].title;
+
+                // 更新时间线
+                const timeline = document.querySelector('[data-i18n="radio.timeline"]');
+                if (timeline && translations["radio.timeline"][currentLang]) {
+                    timeline.innerHTML = translations["radio.timeline"][currentLang].map(item => `<li>${item}</li>`).join('');
+                }
+            }
+
+            function updateLanguageButtons() {
+                document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                    if (btn.getAttribute('data-lang-btn') === currentLang) {
+                        btn.style.color = '#5aedf4';
+                    } else {
+                        btn.style.color = '#f9f002';
+                    }
+                });
+            }
+
+            function openRadioPage() {
+                const modal = document.getElementById('radioModal');
+                const content = document.getElementById('radioContent');
+                
+                if (currentLang === 'zh') {
+                    content.innerHTML = `
+                        <h1>什么是业余无线电</h1>
+                        <p>业余无线电是一种允许个人在特定频段上进行无线电通信的爱好和服务。它不仅仅是通信技术，更是一种全球性的文化交流和应急通信手段。</p>
+                        <h3>如何开始</h3>
+                        <ol>
+                            <li>学习无线电基础知识</li>
+                            <li>参加业余无线电操作证考试</li>
+                            <li>获得呼号和执照</li>
+                            <li>购买设备开始通联</li>
+                        </ol>
+                        <h3>通联方式</h3>
+                        <ul>
+                            <li>本地中继通联</li>
+                            <li>卫星通联</li>
+                            <li>短波通联</li>
+                            <li>数字模式通联</li>
+                        </ul>
+                    `;
+                } else {
+                    content.innerHTML = `
+                        <h1>What Is Amateur Radio</h1>
+                        <p>Amateur radio is a hobby and service that allows individuals to communicate via radio waves on designated frequency bands. It's not just about communication technology, but also a global means of cultural exchange and emergency communication.</p>
+                        <h3>How to Get Started</h3>
+                        <ol>
+                            <li>Learn basic radio knowledge</li>
+                            <li>Take the amateur radio operator exam</li>
+                            <li>Obtain your callsign and license</li>
+                            <li>Purchase equipment and start communicating</li>
+                        </ol>
+                        <h3>Communication Methods</h3>
+                        <ul>
+                            <li>Local repeater communication</li>
+                            <li>Satellite communication</li>
+                            <li>Shortwave communication</li>
+                            <li>Digital mode communication</li>
+                        </ul>
+                    `;
+                }
+                
+                modal.style.display = 'block';
+            }
+
+            function closeRadioPage() {
+                document.getElementById('radioModal').style.display = 'none';
+            }
+
+            // 初始化
+            document.addEventListener('DOMContentLoaded', function() {
+                setLanguage(currentLang);
+                
+                // 每日一言
+                fetch('https://v1.hitokoto.cn')
+                    .then(response => response.json())
+                    .then(data => {
+                        const hitokoto = document.querySelector('#hitokoto_text')
+                        hitokoto.innerText = data.hitokoto
+                    })
+                    .catch(console.error);
+            });
+
+            // ESC键关闭弹窗
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeRadioPage();
+                }
+            });
+        </script>
+    </body>
+</html>

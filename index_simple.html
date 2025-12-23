@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Personal Page of Kokona</title>
+    <meta name="description" content="This is the homepage of Kokona_Shiki">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <!-- 预加载字体和样式 -->
+    <link rel="preload" href="./css/style.css" as="style">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/cyberpunk-2077.css" rel="stylesheet">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "s29yk5g68m");
+    </script>
+    </head>
+    <body>
+        <!--上边栏-->
+        <header style="background-color: black; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <!--上边栏文字部分-->
+            <nav style="font-size: 1.3rem; text-align: left; display: flex; align-items: center;">
+                <a class="header_a" href="https://kokona.top" style="margin-left: 20px;" target="_blank" data-i18n="header.blog">Blog</a>
+                <a class="header_a" href="#" data-i18n="header.radio" onclick="openRadioModal()">What Is Amateur Radio</a>
+            </nav>
+            <!--语言切换-->
+            <nav style="font-size: 1rem; text-align: center; display: flex; align-items: center;">
+                <button class="header_a01" onclick="setLanguage('zh')" data-lang-btn="zh">中文</button>
+                <span style="color: #f9f002; margin: 0 10px;">|</span>
+                <button class="header_a01" onclick="setLanguage('en')" data-lang-btn="en">English</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 关于我 -->
+            <section class="cyberpunk">
+                <h1 data-i18n="about.title">About Me</h1>
+                <p class="cyberpunk" style="margin-top: 30px;" data-i18n="about.content">
+                    Hi, I'm Cade <br/>I enjoy programming and <a href="#" onclick="openRadioModal()">amateur radio</a> in my spare time. My callsign is <a href="https://www.qrz.com/db/BG0FFH">BG0FFH</a>. <br/>Curious about new technologies, and always open to learning.
+                </p>
+            </section>
+
+            <!-- 业余无线电 -->
+            <section class="cyberpunk black">
+                <h1 data-i18n="radio.title">Amateur Radio</h1>
+                
+                <h3 style="margin-top: 15px;" data-i18n="radio.about">About</h3>
+                <ol id="radio-timeline" style="margin-top: 20px; margin-left: 25px;">
+                    <!-- 时间线内容将通过JavaScript动态生成 -->
+                </ol>
+
+                <!-- 我的设备 -->
+                <h3 style="margin-top: 20px;" data-i18n="radio.equipment">My equipments</h3>
+                <div class="equipment-grid">
+                    <div class="equipment-item">
+                        <h4 style="margin-left: 20px; margin-top: 10px;">ICOM IC-705</h4>
+                        <div style="display: flex; justify-content: center;">
+                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ic705.jpg" alt="ICOM IC-705">
+                        </div>
+                    </div>
+                    <div class="equipment-item">
+                        <h4 style="margin-left: 20px; margin-top: 10px;">Quansheng UV-K6</h4>
+                        <div style="display: flex; justify-content: center;">
+                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/uvk6.png" alt="Quansheng UV-K6">
+                        </div>
+                    </div>
+                    <div class="equipment-item">
+                        <h4 style="margin-left: 20px; margin-top: 10px;">Yaesu FT-70DR</h4>
+                        <div style="display: flex; justify-content: center;">
+                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ft70dr.jpg" alt="Yaesu FT-70DR">
+                        </div>
+                    </div>
+                    <div class="equipment-item">
+                        <h4 style="margin-left: 20px; margin-top: 10px;">MMDVM hotspot & CWO</h4>
+                        <div style="display: flex; justify-content: center;">
+                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/mmdvm_cwo.png" alt="MMDVM hotspot & CWO">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 活动记录 -->
+                <h3 data-i18n="radio.activities">Activities</h3>
+                <h2 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.contests">Contests</h2>
+                <h3 style="margin-left: 20px; margin-top: 10px;">CQWW</h3>
+                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.myself">Myself</h4>
+                
+                <div class="activity-images">
+                    <div style="display: flex; justify-content: center;">
+                        <img style="width: 25%; height: auto;" class="cyberpunk" src="./img/myself.jpg" alt="本人">
+                    </div>
+                    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_1.jpg" alt="活动照片1">
+                    </div>
+                    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_2.jpg" alt="活动照片2">
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_3.jpg" alt="活动照片3">
+                    </div>
+                </div>
+
+                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.satellite">Satellite repeater</h4>
+                <div style="display: flex; justify-content: center;">
+                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/705sat.jpg" alt="卫星中继">
+                </div>
+                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.qo100">The first successful amateur radio test via the QO-100 satellite was achieved.</h4>
+                <div style="display: flex; justify-content: center;">
+                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/qo100.jpg" alt="QO-100卫星">
+                </div>
+                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.field">Field operation</h4>
+                <div style="display: flex; justify-content: center;">
+                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation.png" alt="野架活动">
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation1.png" alt="野架活动1">
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation2.png" alt="野架活动2">
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation3.png" alt="野架活动3">
+                </div>
+            </section>
+
+            <!-- 每日一言 -->
+            <section>
+                <h4 style="text-align: center; margin-top: 20px;" data-i18n="quote.title">Everyday quote</h4>
+                <p class="cyberpunk" id="hitokoto" style="color: #000000; margin-top: 20px; text-align: center;">
+                    <span id="hitokoto_text" data-i18n="quote.loading">:D Fetching...</span>
+                </p>
+            </section>
+        </main>
+
+        <!-- 业余无线电弹窗 -->
+        <div id="radioModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeRadioModal()">×</button>
+                <div id="modalContent">
+                    <!-- 内容将动态生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 加载i18n配置 -->
+        <script src="./js/i18n.js"></script>
+        <script>
+            // 多语言管理
+            class I18nManager {
+                constructor() {
+                    this.currentLang = localStorage.getItem('language') || i18nConfig.defaultLanguage;
+                }
+
+                setLanguage(lang) {
+                    this.currentLang = lang;
+                    localStorage.setItem('language', lang);
+                    this.updateLanguage();
+                    this.updateLanguageButtons();
+                }
+
+                translate(key) {
+                    const keys = key.split('.');
+                    let value = i18nConfig.translations[this.currentLang];
+                    
+                    for (const k of keys) {
+                        value = value?.[k];
+                    }
+                    
+                    return value || key;
+                }
+
+                updateLanguage() {
+                    // 更新所有带data-i18n属性的元素
+                    document.querySelectorAll('[data-i18n]').forEach(element => {
+                        const key = element.getAttribute('data-i18n');
+                        const translation = this.translate(key);
+                        
+                        if (translation) {
+                            if (element.tagName === 'INPUT' && element.type === 'text') {
+                                element.placeholder = translation;
+                            } else {
+                                element.innerHTML = translation;
+                            }
+                        }
+                    });
+
+                    // 更新标题
+                    document.title = this.translate('title');
+
+                    // 更新时间线
+                    this.updateTimeline();
+
+                    // 更新语言按钮状态
+                    this.updateLanguageButtons();
+                }
+
+                updateTimeline() {
+                    const timeline = document.getElementById('radio-timeline');
+                    if (timeline) {
+                        const timelineData = this.translate('radio.timeline');
+                        if (Array.isArray(timelineData)) {
+                            timeline.innerHTML = timelineData.map(item => `<li>${item}</li>`).join('');
+                        }
+                    }
+                }
+
+                updateLanguageButtons() {
+                    document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                        if (btn.getAttribute('data-lang-btn') === this.currentLang) {
+                            btn.classList.add('active');
+                        } else {
+                            btn.classList.remove('active');
+                        }
+                    });
+                }
+
+                init() {
+                    this.updateLanguage();
+                }
+            }
+
+            // 全局变量
+            let i18n;
+
+            // 语言切换
+            function setLanguage(lang) {
+                i18n.setLanguage(lang);
+            }
+
+            // 业余无线电弹窗
+            function openRadioModal() {
+                const modal = document.getElementById('radioModal');
+                const content = document.getElementById('modalContent');
+                
+                const modalHTML = `
+                    <h1>${i18n.translate('radio.modal.title')}</h1>
+                    <p>${i18n.translate('radio.modal.content')}</p>
+                    <h3>${i18n.translate('radio.modal.gettingStarted')}</h3>
+                    <ol>
+                        ${i18n.translate('radio.modal.steps').map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                    <h3>${i18n.translate('radio.modal.methods')}</h3>
+                    <ul>
+                        ${i18n.translate('radio.modal.methodsList').map(method => `<li>${method}</li>`).join('')}
+                    </ul>
+                `;
+                
+                content.innerHTML = modalHTML;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeRadioModal() {
+                document.getElementById('radioModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            // 初始化
+            document.addEventListener('DOMContentLoaded', function() {
+                i18n = new I18nManager();
+                i18n.init();
+                
+                // 每日一言
+                fetch('https://v1.hitokoto.cn')
+                    .then(response => response.json())
+                    .then(data => {
+                        const hitokoto = document.querySelector('#hitokoto_text');
+                        if (hitokoto) {
+                            hitokoto.innerText = data.hitokoto;
+                        }
+                    })
+                    .catch(console.error);
+
+                // ESC键关闭弹窗
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeRadioModal();
+                    }
+                });
+
+                // 点击弹窗外部关闭
+                document.getElementById('radioModal').addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeRadioModal();
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            .equipment-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .equipment-item {
+                border: 1px solid #f9f002;
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                overflow-y: auto;
+            }
+
+            .modal-content {
+                position: relative;
+                background-color: #000;
+                margin: 20px auto;
+                padding: 20px;
+                border: 2px solid #f9f002;
+                width: 90%;
+                max-width: 800px;
+                border-radius: 5px;
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: #f9f002;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+                background: none;
+                border: none;
+            }
+
+            .modal-close:hover {
+                color: #5aedf4;
+            }
+
+            @media (max-width: 768px) {
+                .equipment-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .modal-content {
+                    margin: 10px;
+                    width: 95%;
+                }
+            }
+        </style>
+    </body>
+</html>
