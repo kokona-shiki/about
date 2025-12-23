@@ -5,9 +5,13 @@
     <title>Personal Page of Kokona</title>
     <meta name="description" content="This is the homepage of Kokona_Shiki">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <!--<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=VT323&display=swap" rel="stylesheet">-->
-    <link href="./css/cyberpunk-2077.css" rel="stylesheet">
+    <!-- 字体优先加载 -->
+    <link rel="preload" href="./fonts/AdventPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/AdventPro-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/VT323-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="./css/fonts-preload.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/cyberpunk-2077.css" rel="stylesheet">
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

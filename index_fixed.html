@@ -1,22 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
     <meta charset="UTF-8">
-    <title>Personal Page of Kokona</title>
+    <title data-i18n="title">Personal Page of Kokona</title>
     <meta name="description" content="This is the homepage of Kokona_Shiki">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <!-- 字体预加载 - 最高优先级 -->
-    <link rel="preload" href="./fonts/AdventPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/AdventPro-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/VT323-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- 样式加载顺序：字体样式 -> 主要样式 -> 主题样式 -->
-    <link rel="preload" href="./css/fonts-preload.css" as="style">
-    <link rel="preload" href="./css/style.css" as="style">
-    <link rel="preload" href="./css/cyberpunk-2077.css" as="style">
-    <!-- 按优先级加载CSS -->
-    <link href="./css/fonts-preload.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-    <link href="./css/cyberpunk-2077.css" rel="stylesheet">
+    
+    <!-- 字体定义 - 立即加载 -->
+    <style>
+        @font-face {
+            font-family: 'Advent Pro';
+            src: url('./fonts/AdventPro-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Advent Pro';
+            src: url('./fonts/AdventPro-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'VT323';
+            src: url('./fonts/VT323-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        /* 关键样式 - 立即应用 */
+        body {
+            font-family: 'Advent Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f9f002;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: black;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header_a {
+            color: #f9f002; 
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 1.3rem;
+        }
+        
+        .header_a:hover {
+            color: #5aedf4;
+        }
+        
+        .header_a01 {
+            color: #f9f002; 
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+            font-family: 'Advent Pro', Arial, sans-serif;
+        }
+        
+        .header_a01:hover {
+            color: #5aedf4;
+        }
+        
+        .header_a01.active {
+            color: #5aedf4;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Advent Pro', Arial, sans-serif;
+        }
+        
+        h3, h4 {
+            font-family: 'Advent Pro', Arial, sans-serif;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+        
+        .cyberpunk {
+            border: 2px solid #f9f002;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .black {
+            background-color: #111;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #hitokoto {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 30px 0;
+            font-family: 'Advent Pro', Arial, sans-serif;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #000;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #f9f002;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 5px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #f9f002;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .modal-close:hover {
+            color: #5aedf4;
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .equipment-item {
+            border: 1px solid #f9f002;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10px;
+                width: 95%;
+            }
+        }
+    </style>
+    
+    <!-- 统计脚本 -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -27,14 +212,12 @@
     </head>
     <body>
         <!--上边栏-->
-        <header style="background-color: black; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <!--上边栏文字部分-->
-            <nav style="font-size: 1.3rem; text-align: left; display: flex; align-items: center;">
+        <header>
+            <nav style="text-align: left;">
                 <a class="header_a" href="https://kokona.top" style="margin-left: 20px;" target="_blank" data-i18n="header.blog">Blog</a>
                 <a class="header_a" href="#" data-i18n="header.radio" onclick="openRadioModal()">What Is Amateur Radio</a>
             </nav>
-            <!--语言切换-->
-            <nav style="font-size: 1rem; text-align: center; display: flex; align-items: center;">
+            <nav style="font-size: 1rem; text-align: center;">
                 <button class="header_a01" onclick="setLanguage('zh')" data-lang-btn="zh">中文</button>
                 <span style="color: #f9f002; margin: 0 10px;">|</span>
                 <button class="header_a01" onclick="setLanguage('en')" data-lang-btn="en">English</button>
@@ -45,7 +228,7 @@
             <!-- 关于我 -->
             <section class="cyberpunk">
                 <h1 data-i18n="about.title">About Me</h1>
-                <p class="cyberpunk" style="margin-top: 30px;" data-i18n="about.content">
+                <p style="margin-top: 30px;" data-i18n="about.content">
                     Hi, I'm Cade <br/>I enjoy programming and <a href="#" onclick="openRadioModal()">amateur radio</a> in my spare time. My callsign is <a href="https://www.qrz.com/db/BG0FFH">BG0FFH</a>. <br/>Curious about new technologies, and always open to learning.
                 </p>
             </section>
@@ -63,27 +246,27 @@
                 <h3 style="margin-top: 20px;" data-i18n="radio.equipment">My equipments</h3>
                 <div class="equipment-grid">
                     <div class="equipment-item">
-                        <h4 style="margin-left: 20px; margin-top: 10px;">ICOM IC-705</h4>
+                        <h4>ICOM IC-705</h4>
                         <div style="display: flex; justify-content: center;">
-                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ic705.jpg" alt="ICOM IC-705">
+                            <img style="width: 45%; height: auto;" src="./img/ic705.jpg" alt="ICOM IC-705" loading="lazy">
                         </div>
                     </div>
                     <div class="equipment-item">
-                        <h4 style="margin-left: 20px; margin-top: 10px;">Quansheng UV-K6</h4>
+                        <h4>Quansheng UV-K6</h4>
                         <div style="display: flex; justify-content: center;">
-                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/uvk6.png" alt="Quansheng UV-K6">
+                            <img style="width: 45%; height: auto;" src="./img/uvk6.png" alt="Quansheng UV-K6" loading="lazy">
                         </div>
                     </div>
                     <div class="equipment-item">
-                        <h4 style="margin-left: 20px; margin-top: 10px;">Yaesu FT-70DR</h4>
+                        <h4>Yaesu FT-70DR</h4>
                         <div style="display: flex; justify-content: center;">
-                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/ft70dr.jpg" alt="Yaesu FT-70DR">
+                            <img style="width: 45%; height: auto;" src="./img/ft70dr.jpg" alt="Yaesu FT-70DR" loading="lazy">
                         </div>
                     </div>
                     <div class="equipment-item">
-                        <h4 style="margin-left: 20px; margin-top: 10px;">MMDVM hotspot & CWO</h4>
+                        <h4>MMDVM hotspot & CWO</h4>
                         <div style="display: flex; justify-content: center;">
-                            <img style="width: 45%; height: auto;" class="cyberpunk" src="./img/mmdvm_cwo.png" alt="MMDVM hotspot & CWO">
+                            <img style="width: 45%; height: auto;" src="./img/mmdvm_cwo.png" alt="MMDVM hotspot & CWO" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -96,53 +279,31 @@
                 
                 <div class="activity-images">
                     <div style="display: flex; justify-content: center;">
-                        <img style="width: 25%; height: auto;" class="cyberpunk" src="./img/myself.jpg" alt="本人">
+                        <img style="width: 25%; height: auto;" src="./img/myself.jpg" alt="本人" loading="lazy">
                     </div>
                     <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_1.jpg" alt="活动照片1">
+                        <img style="width: 75%; height: auto;" src="./img/by0ac_1.jpg" alt="活动照片1" loading="lazy">
                     </div>
                     <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_2.jpg" alt="活动照片2">
+                        <img style="width: 75%; height: auto;" src="./img/by0ac_2.jpg" alt="活动照片2" loading="lazy">
                     </div>
                     <div style="display: flex; justify-content: center;">
-                        <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/by0ac_3.jpg" alt="活动照片3">
+                        <img style="width: 75%; height: auto;" src="./img/by0ac_3.jpg" alt="活动照片3" loading="lazy">
                     </div>
-                </div>
-
-                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.satellite">Satellite repeater</h4>
-                <div style="display: flex; justify-content: center;">
-                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/705sat.jpg" alt="卫星中继">
-                </div>
-                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.qo100">The first successful amateur radio test via the QO-100 satellite was achieved.</h4>
-                <div style="display: flex; justify-content: center;">
-                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/qo100.jpg" alt="QO-100卫星">
-                </div>
-                <h4 style="margin-left: 20px; margin-top: 10px;" data-i18n="radio.field">Field operation</h4>
-                <div style="display: flex; justify-content: center;">
-                    <img style="width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation.png" alt="野架活动">
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation1.png" alt="野架活动1">
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation2.png" alt="野架活动2">
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <img style="margin-top: 15px; width: 75%; height: auto;" class="cyberpunk" src="./img/fieldoperation3.png" alt="野架活动3">
                 </div>
             </section>
 
             <!-- 每日一言 -->
             <section>
                 <h4 style="text-align: center; margin-top: 20px;" data-i18n="quote.title">Everyday quote</h4>
-                <p class="cyberpunk" id="hitokoto" style="color: #000000; margin-top: 20px; text-align: center;">
+                <p id="hitokoto" style="color: #f9f002; margin-top: 20px; text-align: center;">
                     <span id="hitokoto_text" data-i18n="quote.loading">:D Fetching...</span>
                 </p>
             </section>
         </main>
 
         <!-- 业余无线电弹窗 -->
-        <div id="radioModal" class="modal">
+        <div id="radioModal" class="modal hidden">
             <div class="modal-content">
                 <button class="modal-close" onclick="closeRadioModal()">×</button>
                 <div id="modalContent">
@@ -151,26 +312,7 @@
             </div>
         </div>
 
-        <!-- 字体加载优化 - 在页面加载前执行 -->
-        <script>
-        if ('fonts' in document) {
-            Promise.all([
-                document.fonts.load('400 1em Advent Pro'),
-                document.fonts.load('700 1em Advent Pro'),
-                document.fonts.load('400 1em VT323')
-            ]).then(function() {
-                document.body.classList.add('fonts-loaded');
-                console.log('字体加载完成');
-            }).catch(function(error) {
-                console.log('字体加载失败，使用系统字体');
-                document.body.classList.add('fonts-loaded');
-            });
-        } else {
-            // 回退方案：直接添加字体加载完成类
-            document.body.classList.add('fonts-loaded');
-        }
-        </script>
-        <!-- 加载i18n配置 -->
+        <!-- i18n和脚本 -->
         <script src="./js/i18n.js"></script>
         <script>
             // 多语言管理
@@ -198,7 +340,6 @@
                 }
 
                 updateLanguage() {
-                    // 更新所有带data-i18n属性的元素
                     document.querySelectorAll('[data-i18n]').forEach(element => {
                         const key = element.getAttribute('data-i18n');
                         const translation = this.translate(key);
@@ -212,13 +353,8 @@
                         }
                     });
 
-                    // 更新标题
                     document.title = this.translate('title');
-
-                    // 更新时间线
                     this.updateTimeline();
-
-                    // 更新语言按钮状态
                     this.updateLanguageButtons();
                 }
 
@@ -247,15 +383,12 @@
                 }
             }
 
-            // 全局变量
             let i18n;
 
-            // 语言切换
             function setLanguage(lang) {
                 i18n.setLanguage(lang);
             }
 
-            // 业余无线电弹窗
             function openRadioModal() {
                 const modal = document.getElementById('radioModal');
                 const content = document.getElementById('modalContent');
@@ -274,12 +407,12 @@
                 `;
                 
                 content.innerHTML = modalHTML;
-                modal.style.display = 'block';
+                modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
 
             function closeRadioModal() {
-                document.getElementById('radioModal').style.display = 'none';
+                document.getElementById('radioModal').classList.add('hidden');
                 document.body.style.overflow = 'auto';
             }
 
@@ -288,16 +421,18 @@
                 i18n = new I18nManager();
                 i18n.init();
                 
-                // 每日一言
-                fetch('https://v1.hitokoto.cn')
-                    .then(response => response.json())
-                    .then(data => {
-                        const hitokoto = document.querySelector('#hitokoto_text');
-                        if (hitokoto) {
-                            hitokoto.innerText = data.hitokoto;
-                        }
-                    })
-                    .catch(console.error);
+                // 延迟加载每日一言
+                setTimeout(() => {
+                    fetch('https://v1.hitokoto.cn')
+                        .then(response => response.json())
+                        .then(data => {
+                            const hitokoto = document.querySelector('#hitokoto_text');
+                            if (hitokoto) {
+                                hitokoto.innerText = data.hitokoto;
+                            }
+                        })
+                        .catch(console.error);
+                }, 1000);
 
                 // ESC键关闭弹窗
                 document.addEventListener('keydown', function(e) {
@@ -314,70 +449,5 @@
                 });
             });
         </script>
-
-        <style>
-            .equipment-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                margin-top: 20px;
-            }
-
-            .equipment-item {
-                border: 1px solid #f9f002;
-                padding: 15px;
-                border-radius: 5px;
-            }
-
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-                overflow-y: auto;
-            }
-
-            .modal-content {
-                position: relative;
-                background-color: #000;
-                margin: 20px auto;
-                padding: 20px;
-                border: 2px solid #f9f002;
-                width: 90%;
-                max-width: 800px;
-                border-radius: 5px;
-            }
-
-            .modal-close {
-                position: absolute;
-                top: 10px;
-                right: 15px;
-                color: #f9f002;
-                font-size: 28px;
-                font-weight: bold;
-                cursor: pointer;
-                background: none;
-                border: none;
-            }
-
-            .modal-close:hover {
-                color: #5aedf4;
-            }
-
-            @media (max-width: 768px) {
-                .equipment-grid {
-                    grid-template-columns: 1fr;
-                }
-                
-                .modal-content {
-                    margin: 10px;
-                    width: 95%;
-                }
-            }
-        </style>
     </body>
 </html>
