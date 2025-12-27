@@ -22,7 +22,7 @@ const i18nConfig = {
                 "I later acquired an ICOM IC-705 and a shortwave GP antenna to begin SWL on HF.",
                 "In my spare time, I explored various communication modes with <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a>, including D-STAR and RTTY.",
                 "On May 23, 2025, I successfully made my first contact via the RS-44 linear transponder satellite with <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a>.",
-                "In August 2025, I obtained my amateur radio Class B license and began to explore shortwave."
+                "I currently hold a Class B license."
             ],
             "radio.equipment": "My equipments",
             "radio.activities": "Activities",
@@ -71,7 +71,7 @@ const i18nConfig = {
                 "后续购入 ICOM IC-705 和短波GP天线，开始进行短波守听（SWL）。",
                 "在业余时间与 <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a> 一起尝试多种通信方式，如 D-STAR 与 RTTY。",
                 "2025年5月23日，首次通过 RS-44 卫星线性转发器与 <a href='https://www.qrz.com/db/BG0EUQ' target='_blank'>BG0EUQ</a> 完成通联。",
-                "在2025年8月份，我取得了业余无线电B类执照并且开始接触短波。"
+                "现在持有B类执照操作证。"
             ],
             "radio.equipment": "我的设备",
             "radio.activities": "活动记录",
